@@ -2,7 +2,7 @@
 
 ## UIStackView
   - 열 또는 행에 View들의 묶음을 배치할 수 있는 간소화된 인터페이스
-  - 상황에 따라 복잡한 UI를 UIStackView를 사용하여 구성하면 각각의 Autolayout을 사용하지 않아도
+  - 상황에 따라 복잡한 UI를 UIStackView를 사용하여 구성하면 각각의 Autolayout을 사용하지 않아도  
     간단하게 UI를 구성할 수 있음
   - 속성
     * Axis : StackView의 방향을 설정 (Vertical, Horizental)
