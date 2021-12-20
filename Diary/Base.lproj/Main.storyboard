@@ -100,7 +100,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="tTJ-AN-mzH" id="oRp-5T-Wzr"/>
+                        <outlet property="collectionView" destination="tTJ-AN-mzH" id="2nY-C0-zL7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -180,15 +180,15 @@
                     <navigationItem key="navigationItem" title="일기작성" id="p27-dP-SQ8">
                         <barButtonItem key="rightBarButtonItem" title="등록" id="y40-6D-7a9">
                             <connections>
-                                <action selector="tapConfirmButton:" destination="oTM-Kb-1Dg" id="cpb-qw-rzF"/>
+                                <action selector="tapConfirmButton:" destination="oTM-Kb-1Dg" id="6rh-qE-KcW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="confirmButton" destination="y40-6D-7a9" id="75B-j1-dpX"/>
-                        <outlet property="contentsTextView" destination="1or-jp-oxX" id="fgc-Uu-Mx9"/>
-                        <outlet property="dateTextField" destination="uF6-8c-xT4" id="FKT-fG-HAV"/>
-                        <outlet property="titleTextField" destination="IrN-70-cZM" id="NGl-Vl-3F5"/>
+                        <outlet property="confirmButton" destination="y40-6D-7a9" id="Nc2-gr-yzY"/>
+                        <outlet property="contentsTextView" destination="1or-jp-oxX" id="LqM-vg-iLy"/>
+                        <outlet property="dateTextField" destination="uF6-8c-xT4" id="1uT-QF-Wk6"/>
+                        <outlet property="titleTextField" destination="IrN-70-cZM" id="hfC-0a-Zn3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLe-Fe-c5u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -263,8 +263,8 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="414" height="80"/>
                                         <connections>
-                                            <outlet property="dateLabel" destination="Coe-kk-h58" id="c3x-H9-9ZQ"/>
-                                            <outlet property="titleLabel" destination="NHJ-U9-Mf6" id="F7V-KZ-xDf"/>
+                                            <outlet property="dateLabel" destination="Coe-kk-h58" id="VuF-WK-Hht"/>
+                                            <outlet property="titleLabel" destination="NHJ-U9-Mf6" id="lXA-fK-Bxc"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -281,7 +281,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="4To-od-dUN"/>
                     <connections>
-                        <outlet property="collectionView" destination="GhS-oS-l2t" id="27x-UW-AO8"/>
+                        <outlet property="collectionView" destination="GhS-oS-l2t" id="DDr-eF-cJD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="psl-Bv-Px3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -354,7 +354,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="수정"/>
                                         <connections>
-                                            <action selector="tapEditButton:" destination="ai6-NN-oy7" eventType="touchUpInside" id="SxF-No-vb5"/>
+                                            <action selector="tapEditButton:" destination="ai6-NN-oy7" eventType="touchUpInside" id="bHl-f4-dkQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pui-aS-o0b">
@@ -363,7 +363,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="삭제"/>
                                         <connections>
-                                            <action selector="tapDeleteButton:" destination="ai6-NN-oy7" eventType="touchUpInside" id="JcT-y6-uKA"/>
+                                            <action selector="tapDeleteButton:" destination="ai6-NN-oy7" eventType="touchUpInside" id="9rS-Ps-jtZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -389,9 +389,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="contentsTextView" destination="O3X-Xe-3dJ" id="0rl-sL-VoR"/>
-                        <outlet property="dateLabel" destination="gV3-Fs-wLm" id="yMO-Cz-5QP"/>
-                        <outlet property="titleLabel" destination="Cvb-5Q-pCW" id="95v-jW-NqG"/>
+                        <outlet property="contentsTextView" destination="O3X-Xe-3dJ" id="HYB-vZ-QsR"/>
+                        <outlet property="dateLabel" destination="gV3-Fs-wLm" id="QOs-Wh-8fc"/>
+                        <outlet property="titleLabel" destination="Cvb-5Q-pCW" id="alC-fm-uL5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJc-xg-3P2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

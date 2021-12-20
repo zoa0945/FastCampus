@@ -5,6 +5,23 @@
 //  Created by Mac on 2021/12/10.
 //
 
+/*
+ UITabBarController
+    - UITabBer는 앱에서 서로다른 하위작업, 뷰, 모드 사이에 선택을 할 수 있도록 tabBar에 하나 혹은 하나이상의 버튼을 보여줌
+    - 다중 선택 인터페이스를 관리하는 컨테이너뷰컨트롤러로 선택에 따라 어떤 자식 뷰컨트롤러를 보여줄지 결정해줌
+
+ UICollectionView
+    - 데이터 항목에 정렬된 컬렉션을 관리하고 커스텀한 레이아웃을 사용해 표시하는 객체
+    - ScrollView를 상속받고 다양한 레이아웃을 보여줄 때 사용
+    - Cell: 컬렉션 뷰의 컨텐츠를 표시
+    - Supplementary View: 섹션에 대한 정보를 표시
+    - Decoration View: 컬렉션뷰에 대한 배경을 꾸밀때 사용
+ 
+ NotificationCenter
+    - 등록된 이벤트가 발새하면 해당 이벤트들에 대한 행동을 취함
+    - 앱 내에서 아무데서나 메세지를 던지면 다른 아무데서나 메세지를 받을 수 있음
+ */
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -37,22 +54,30 @@ class ViewController: UIViewController {
     }
     
     @objc func deleteDiaryNotification(_ notification: Notification) {
-        guard let indexPath = notification.object as? IndexPath else { return }
-        self.diaryList.remove(at: indexPath.row)
-        self.collectionView.deleteItems(at: [indexPath])
+        guard let uuidString = notification.object as? String else { return }
+        guard let idx = self.diaryList.firstIndex(where: {
+            $0.uuidString == uuidString
+        }) else { return }
+        self.diaryList.remove(at: idx)
+        self.collectionView.deleteItems(at: [IndexPath(row: idx, section: 0)])
     }
     
     @objc func starDiaryNotification(_ notification: Notification) {
         guard let starDiary = notification.object as? [String: Any] else { return }
         guard let isStar = starDiary["isStar"] as? Bool else { return }
-        guard let indexPath = starDiary["indexPath"] as? IndexPath else { return }
-        self.diaryList[indexPath.row].isStar = isStar
+        guard let uuidString = starDiary["uuidString"] as? String else { return }
+        guard let idx = self.diaryList.firstIndex(where: {
+            $0.uuidString == uuidString
+        }) else { return }
+        self.diaryList[idx].isStar = isStar
     }
     
     @objc func editDiaryNotification(_ notification: Notification) {
         guard let diary = notification.object as? Diary else { return }
-        guard let row = notification.userInfo?["indexPath.row"] as? Int else { return }
-        self.diaryList[row] = diary
+        guard let idx = self.diaryList.firstIndex(where: {
+            $0.uuidString == diary.uuidString
+        }) else { return }
+        self.diaryList[idx] = diary
         self.diaryList = self.diaryList.sorted(by: {
             $0.date.compare($1.date) == .orderedDescending
         })
@@ -62,6 +87,7 @@ class ViewController: UIViewController {
     private func saveDiary() {
         let data = self.diaryList.map{
             [
+                "uuidString": $0.uuidString,
                 "title": $0.title,
                 "contents": $0.contents,
                 "date": $0.date,
@@ -80,7 +106,12 @@ class ViewController: UIViewController {
             guard let contents = $0["contents"] as? String else { return nil }
             guard let date = $0["date"] as? Date else { return nil }
             guard let isStar = $0["isStar"] as? Bool else { return nil }
-            return Diary(title: title, contents: contents, date: date, isStar: isStar)
+            guard let uuidString = $0["uuidString"] as? String else { return nil }
+            return Diary(uuidString: uuidString,
+                         title: title,
+                         contents: contents,
+                         date: date,
+                         isStar: isStar)
         }
         self.diaryList = self.diaryList.sorted(by: { d1, d2 in
             d1.date.compare(d2.date) == .orderedDescending
