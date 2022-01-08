@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import GoogleSignIn
+import Firebase
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailLoginButton: UIButton!
-    @IBOutlet weak var googleLoginButton: UIButton!
+    @IBOutlet weak var googleLoginButton: GIDSignInButton!
     @IBOutlet weak var appleLoginLogin: UIButton!
     
     override func viewDidLoad() {
@@ -31,8 +33,33 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func tapGoogleLoginButton(_ sender: Any) {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+        let SignInConfig = GIDConfiguration.init(clientID: clientID)
+        GIDSignIn.sharedInstance.signIn(with: SignInConfig, presenting: self) { user, error in
+            guard error == nil else { return }
+            guard let user = user else { return }
+            
+            user.authentication.do { authentication, error in
+                guard error == nil else { return }
+                guard let authentication = authentication else { return }
+                
+                guard let idToken = authentication.idToken else { return }
+                let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: authentication.accessToken)
+                
+                Auth.auth().signIn(with: credential) { _, _ in
+                    self.showMainViewController()
+                }
+            }
+        }
     }
     
     @IBAction func tapAppleLoginButton(_ sender: Any) {
+    }
+    
+    private func showMainViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "MainViewController")
+        mainViewController.modalPresentationStyle = .fullScreen
+        navigationController?.show(mainViewController, sender: nil)
     }
 }

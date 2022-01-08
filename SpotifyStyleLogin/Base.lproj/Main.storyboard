@@ -249,7 +249,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1K-rR-d6Y">
-                                <rect key="frame" x="175.5" y="431.5" width="63" height="34"/>
+                                <rect key="frame" x="175.5" y="485.5" width="63" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="로그아웃">
@@ -259,17 +259,31 @@
                                     <action selector="tapLogoutButton:" destination="ZOd-IC-yEn" eventType="touchUpInside" id="BK2-bG-Jxm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wIu-o1-Fvb">
+                                <rect key="frame" x="158" y="431.5" width="98" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="비밀번호 변경">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapChangePasswordButton:" destination="ZOd-IC-yEn" eventType="touchUpInside" id="43p-Xg-gdL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XyQ-j9-TCX"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="wIu-o1-Fvb" firstAttribute="centerX" secondItem="XyQ-j9-TCX" secondAttribute="centerX" id="9MV-g4-e0g"/>
                             <constraint firstItem="M1K-rR-d6Y" firstAttribute="centerX" secondItem="XyQ-j9-TCX" secondAttribute="centerX" id="Asu-fN-wDA"/>
+                            <constraint firstItem="M1K-rR-d6Y" firstAttribute="top" secondItem="wIu-o1-Fvb" secondAttribute="bottom" constant="20" id="UEb-wv-5or"/>
+                            <constraint firstItem="wIu-o1-Fvb" firstAttribute="top" secondItem="BGp-vY-Jd9" secondAttribute="bottom" constant="20" id="bny-EG-X8l"/>
                             <constraint firstItem="BGp-vY-Jd9" firstAttribute="centerY" secondItem="XyQ-j9-TCX" secondAttribute="centerY" multiplier="7/8" id="gb9-no-viR"/>
-                            <constraint firstItem="M1K-rR-d6Y" firstAttribute="top" secondItem="BGp-vY-Jd9" secondAttribute="bottom" constant="20" id="pi8-RH-e5b"/>
                             <constraint firstItem="BGp-vY-Jd9" firstAttribute="centerX" secondItem="XyQ-j9-TCX" secondAttribute="centerX" id="rmT-rW-eYN"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="changePasswordButton" destination="wIu-o1-Fvb" id="ODr-O6-2G3"/>
                         <outlet property="welcomeLabel" destination="BGp-vY-Jd9" id="aqb-rW-ezH"/>
                     </connections>
                 </viewController>
