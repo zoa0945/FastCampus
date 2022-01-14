@@ -13,6 +13,8 @@ Firebase 인증 서비스를 통해 다양한 방법으로 로그인 할 수 있
 * Firebase
 
 ## Screenshots
+<img width="432" alt="스크린샷 2022-01-14 오후 7 06 27" src="https://user-images.githubusercontent.com/51810980/149498383-ce42f5ed-3e9b-4542-87fb-df84565a40ec.png">
+
 
 ## Improvements
 * Apple 계정으로 로그인 추가
