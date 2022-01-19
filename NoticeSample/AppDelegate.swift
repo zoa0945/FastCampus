@@ -15,6 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+        
+        // Firebase가 각각의 기기에 부여한 인증 토큰 값을 콘솔에서 확인 가능
+        Installations.installations().authTokenForcingRefresh(true) { result, error in
+            if let error = error {
+                print("ERROR")
+                return
+            }
+            
+            guard let result = result else { return }
+            print("Installation auth token: \(result.authToken)")
+        }
         return true
     }
 
