@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  DrinkAlarm
 //
-//  Created by Mac on 2022/01/21.
+//  Created by Mac on 2022/01/24.
 //
 
 import UIKit

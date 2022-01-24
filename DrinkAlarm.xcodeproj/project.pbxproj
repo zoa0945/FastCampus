@@ -7,27 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		043C53B0279ACF1300847742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C53AF279ACF1300847742 /* AppDelegate.swift */; };
-		043C53B2279ACF1300847742 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C53B1279ACF1300847742 /* SceneDelegate.swift */; };
-		043C53B7279ACF1300847742 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043C53B5279ACF1300847742 /* Main.storyboard */; };
-		043C53B9279ACF1500847742 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043C53B8279ACF1500847742 /* Assets.xcassets */; };
-		043C53BC279ACF1500847742 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043C53BA279ACF1500847742 /* LaunchScreen.storyboard */; };
-		043C53C4279ACF3B00847742 /* AlertListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C53C3279ACF3B00847742 /* AlertListViewController.swift */; };
+		0466F83B279EA762006048B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466F83A279EA762006048B4 /* AppDelegate.swift */; };
+		0466F83D279EA762006048B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466F83C279EA762006048B4 /* SceneDelegate.swift */; };
+		0466F842279EA762006048B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0466F840279EA762006048B4 /* Main.storyboard */; };
+		0466F844279EA764006048B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0466F843279EA764006048B4 /* Assets.xcassets */; };
+		0466F847279EA764006048B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0466F845279EA764006048B4 /* LaunchScreen.storyboard */; };
+		0466F84F279EA795006048B4 /* AlertListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466F84E279EA795006048B4 /* AlertListViewController.swift */; };
+		04945AF9279EA8CD00DD5E2B /* AlertListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04945AF7279EA8CD00DD5E2B /* AlertListCell.swift */; };
+		04945AFA279EA8CD00DD5E2B /* AlertListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04945AF8279EA8CD00DD5E2B /* AlertListCell.xib */; };
+		04945AFC279EAA1F00DD5E2B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04945AFB279EAA1F00DD5E2B /* Alert.swift */; };
+		04945AFE279EAC7E00DD5E2B /* AddAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04945AFD279EAC7E00DD5E2B /* AddAlertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		043C53AC279ACF1300847742 /* DrinkAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		043C53AF279ACF1300847742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		043C53B1279ACF1300847742 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		043C53B6279ACF1300847742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		043C53B8279ACF1500847742 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		043C53BB279ACF1500847742 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		043C53BD279ACF1500847742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		043C53C3279ACF3B00847742 /* AlertListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListViewController.swift; sourceTree = "<group>"; };
+		0466F837279EA762006048B4 /* DrinkAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0466F83A279EA762006048B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0466F83C279EA762006048B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0466F841279EA762006048B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0466F843279EA764006048B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0466F846279EA764006048B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0466F848279EA764006048B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0466F84E279EA795006048B4 /* AlertListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListViewController.swift; sourceTree = "<group>"; };
+		04945AF7279EA8CD00DD5E2B /* AlertListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertListCell.swift; sourceTree = "<group>"; };
+		04945AF8279EA8CD00DD5E2B /* AlertListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertListCell.xib; sourceTree = "<group>"; };
+		04945AFB279EAA1F00DD5E2B /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		04945AFD279EAC7E00DD5E2B /* AddAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlertViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		043C53A9279ACF1300847742 /* Frameworks */ = {
+		0466F834279EA762006048B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,32 +45,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		043C53A3279ACF1300847742 = {
+		0466F82E279EA762006048B4 = {
 			isa = PBXGroup;
 			children = (
-				043C53AE279ACF1300847742 /* DrinkAlarm */,
-				043C53AD279ACF1300847742 /* Products */,
+				0466F839279EA762006048B4 /* DrinkAlarm */,
+				0466F838279EA762006048B4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		043C53AD279ACF1300847742 /* Products */ = {
+		0466F838279EA762006048B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				043C53AC279ACF1300847742 /* DrinkAlarm.app */,
+				0466F837279EA762006048B4 /* DrinkAlarm.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		043C53AE279ACF1300847742 /* DrinkAlarm */ = {
+		0466F839279EA762006048B4 /* DrinkAlarm */ = {
 			isa = PBXGroup;
 			children = (
-				043C53AF279ACF1300847742 /* AppDelegate.swift */,
-				043C53B1279ACF1300847742 /* SceneDelegate.swift */,
-				043C53C3279ACF3B00847742 /* AlertListViewController.swift */,
-				043C53B5279ACF1300847742 /* Main.storyboard */,
-				043C53B8279ACF1500847742 /* Assets.xcassets */,
-				043C53BA279ACF1500847742 /* LaunchScreen.storyboard */,
-				043C53BD279ACF1500847742 /* Info.plist */,
+				0466F83A279EA762006048B4 /* AppDelegate.swift */,
+				0466F83C279EA762006048B4 /* SceneDelegate.swift */,
+				0466F84E279EA795006048B4 /* AlertListViewController.swift */,
+				04945AFB279EAA1F00DD5E2B /* Alert.swift */,
+				04945AF7279EA8CD00DD5E2B /* AlertListCell.swift */,
+				04945AF8279EA8CD00DD5E2B /* AlertListCell.xib */,
+				0466F840279EA762006048B4 /* Main.storyboard */,
+				04945AFD279EAC7E00DD5E2B /* AddAlertViewController.swift */,
+				0466F843279EA764006048B4 /* Assets.xcassets */,
+				0466F845279EA764006048B4 /* LaunchScreen.storyboard */,
+				0466F848279EA764006048B4 /* Info.plist */,
 			);
 			path = DrinkAlarm;
 			sourceTree = "<group>";
@@ -70,13 +82,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		043C53AB279ACF1300847742 /* DrinkAlarm */ = {
+		0466F836279EA762006048B4 /* DrinkAlarm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 043C53C0279ACF1500847742 /* Build configuration list for PBXNativeTarget "DrinkAlarm" */;
+			buildConfigurationList = 0466F84B279EA764006048B4 /* Build configuration list for PBXNativeTarget "DrinkAlarm" */;
 			buildPhases = (
-				043C53A8279ACF1300847742 /* Sources */,
-				043C53A9279ACF1300847742 /* Frameworks */,
-				043C53AA279ACF1300847742 /* Resources */,
+				0466F833279EA762006048B4 /* Sources */,
+				0466F834279EA762006048B4 /* Frameworks */,
+				0466F835279EA762006048B4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,25 +96,25 @@
 			);
 			name = DrinkAlarm;
 			productName = DrinkAlarm;
-			productReference = 043C53AC279ACF1300847742 /* DrinkAlarm.app */;
+			productReference = 0466F837279EA762006048B4 /* DrinkAlarm.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		043C53A4279ACF1300847742 /* Project object */ = {
+		0466F82F279EA762006048B4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					043C53AB279ACF1300847742 = {
+					0466F836279EA762006048B4 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 043C53A7279ACF1300847742 /* Build configuration list for PBXProject "DrinkAlarm" */;
+			buildConfigurationList = 0466F832279EA762006048B4 /* Build configuration list for PBXProject "DrinkAlarm" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +122,59 @@
 				en,
 				Base,
 			);
-			mainGroup = 043C53A3279ACF1300847742;
-			productRefGroup = 043C53AD279ACF1300847742 /* Products */;
+			mainGroup = 0466F82E279EA762006048B4;
+			productRefGroup = 0466F838279EA762006048B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				043C53AB279ACF1300847742 /* DrinkAlarm */,
+				0466F836279EA762006048B4 /* DrinkAlarm */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		043C53AA279ACF1300847742 /* Resources */ = {
+		0466F835279EA762006048B4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043C53BC279ACF1500847742 /* LaunchScreen.storyboard in Resources */,
-				043C53B9279ACF1500847742 /* Assets.xcassets in Resources */,
-				043C53B7279ACF1300847742 /* Main.storyboard in Resources */,
+				0466F847279EA764006048B4 /* LaunchScreen.storyboard in Resources */,
+				0466F844279EA764006048B4 /* Assets.xcassets in Resources */,
+				04945AFA279EA8CD00DD5E2B /* AlertListCell.xib in Resources */,
+				0466F842279EA762006048B4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		043C53A8279ACF1300847742 /* Sources */ = {
+		0466F833279EA762006048B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				043C53B0279ACF1300847742 /* AppDelegate.swift in Sources */,
-				043C53B2279ACF1300847742 /* SceneDelegate.swift in Sources */,
-				043C53C4279ACF3B00847742 /* AlertListViewController.swift in Sources */,
+				0466F83B279EA762006048B4 /* AppDelegate.swift in Sources */,
+				0466F83D279EA762006048B4 /* SceneDelegate.swift in Sources */,
+				04945AF9279EA8CD00DD5E2B /* AlertListCell.swift in Sources */,
+				04945AFC279EAA1F00DD5E2B /* Alert.swift in Sources */,
+				0466F84F279EA795006048B4 /* AlertListViewController.swift in Sources */,
+				04945AFE279EAC7E00DD5E2B /* AddAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		043C53B5279ACF1300847742 /* Main.storyboard */ = {
+		0466F840279EA762006048B4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				043C53B6279ACF1300847742 /* Base */,
+				0466F841279EA762006048B4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		043C53BA279ACF1500847742 /* LaunchScreen.storyboard */ = {
+		0466F845279EA764006048B4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				043C53BB279ACF1500847742 /* Base */,
+				0466F846279EA764006048B4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +182,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		043C53BE279ACF1500847742 /* Debug */ = {
+		0466F849279EA764006048B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -227,7 +243,7 @@
 			};
 			name = Debug;
 		};
-		043C53BF279ACF1500847742 /* Release */ = {
+		0466F84A279EA764006048B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -282,7 +298,7 @@
 			};
 			name = Release;
 		};
-		043C53C1279ACF1500847742 /* Debug */ = {
+		0466F84C279EA764006048B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -310,7 +326,7 @@
 			};
 			name = Debug;
 		};
-		043C53C2279ACF1500847742 /* Release */ = {
+		0466F84D279EA764006048B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -341,25 +357,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		043C53A7279ACF1300847742 /* Build configuration list for PBXProject "DrinkAlarm" */ = {
+		0466F832279EA762006048B4 /* Build configuration list for PBXProject "DrinkAlarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				043C53BE279ACF1500847742 /* Debug */,
-				043C53BF279ACF1500847742 /* Release */,
+				0466F849279EA764006048B4 /* Debug */,
+				0466F84A279EA764006048B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		043C53C0279ACF1500847742 /* Build configuration list for PBXNativeTarget "DrinkAlarm" */ = {
+		0466F84B279EA764006048B4 /* Build configuration list for PBXNativeTarget "DrinkAlarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				043C53C1279ACF1500847742 /* Debug */,
-				043C53C2279ACF1500847742 /* Release */,
+				0466F84C279EA764006048B4 /* Debug */,
+				0466F84D279EA764006048B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 043C53A4279ACF1300847742 /* Project object */;
+	rootObject = 0466F82F279EA762006048B4 /* Project object */;
 }
