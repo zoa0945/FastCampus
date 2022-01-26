@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04658D7B27A1551200706E9D /* UNNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04658D7A27A1551200706E9D /* UNNotificationCenter.swift */; };
 		0466F83B279EA762006048B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466F83A279EA762006048B4 /* AppDelegate.swift */; };
 		0466F83D279EA762006048B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466F83C279EA762006048B4 /* SceneDelegate.swift */; };
 		0466F842279EA762006048B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0466F840279EA762006048B4 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04658D7A27A1551200706E9D /* UNNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNNotificationCenter.swift; sourceTree = "<group>"; };
 		0466F837279EA762006048B4 /* DrinkAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0466F83A279EA762006048B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0466F83C279EA762006048B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				0466F83A279EA762006048B4 /* AppDelegate.swift */,
 				0466F83C279EA762006048B4 /* SceneDelegate.swift */,
 				0466F84E279EA795006048B4 /* AlertListViewController.swift */,
+				04658D7A27A1551200706E9D /* UNNotificationCenter.swift */,
 				04945AFB279EAA1F00DD5E2B /* Alert.swift */,
 				04945AF7279EA8CD00DD5E2B /* AlertListCell.swift */,
 				04945AF8279EA8CD00DD5E2B /* AlertListCell.xib */,
@@ -156,6 +159,7 @@
 				04945AF9279EA8CD00DD5E2B /* AlertListCell.swift in Sources */,
 				04945AFC279EAA1F00DD5E2B /* Alert.swift in Sources */,
 				0466F84F279EA795006048B4 /* AlertListViewController.swift in Sources */,
+				04658D7B27A1551200706E9D /* UNNotificationCenter.swift in Sources */,
 				04945AFE279EAC7E00DD5E2B /* AddAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
