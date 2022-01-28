@@ -11,7 +11,7 @@ Cocoapods를 사용해 외부 라이브러리를 관리하고 Alamofire를 사�
 * Cocoapods
 
 ## Screenshots
-
+<img width="216" alt="스크린샷 2022-01-28 오후 5 55 30" src="https://user-images.githubusercontent.com/51810980/151517005-bb822eb2-60a5-4b53-9a42-8f8f15464f5c.png"><img width="216" alt="스크린샷 2022-01-28 오후 5 55 43" src="https://user-images.githubusercontent.com/51810980/151517029-e6b2d64c-be2d-4675-a751-75d8d7fa48b3.png">
 
 ## Improvements
 1. 차트의 가시성 개선
