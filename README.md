@@ -11,3 +11,4 @@ Local Notification을 설정하기 위해 content, trigger, request를 만들고
 * UIKit, Storyboard
 
 ## Screenshots
+<img width="216" alt="스크린샷 2022-02-18 오후 8 35 45" src="https://user-images.githubusercontent.com/51810980/154675311-80ae0f93-0669-4f79-85e7-1a56680bc7db.png"><img width="216" alt="스크린샷 2022-02-18 오후 8 36 05" src="https://user-images.githubusercontent.com/51810980/154675339-2c3f9f14-121e-471e-8eb0-7486ae26db6d.png">
