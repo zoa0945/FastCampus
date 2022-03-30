@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0433A22327F469AD00C64DF4 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0433A22227F469AD00C64DF4 /* AppViewController.swift */; };
 		046D764C27F19B73001A0260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D764B27F19B73001A0260 /* AppDelegate.swift */; };
 		046D764E27F19B73001A0260 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D764D27F19B73001A0260 /* SceneDelegate.swift */; };
 		046D765027F19B73001A0260 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046D764F27F19B73001A0260 /* TabBarController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0433A22227F469AD00C64DF4 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		046D764827F19B73001A0260 /* AppStoreSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		046D764B27F19B73001A0260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		046D764D27F19B73001A0260 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0433A22427F469B200C64DF4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				0433A22227F469AD00C64DF4 /* AppViewController.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		046D763F27F19B73001A0260 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +87,7 @@
 		046D766527F1A012001A0260 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0433A22427F469B200C64DF4 /* App */,
 				046D766627F1A03D001A0260 /* Today */,
 				046D764F27F19B73001A0260 /* TabBarController.swift */,
 			);
@@ -175,6 +186,7 @@
 				046D765027F19B73001A0260 /* TabBarController.swift in Sources */,
 				046D764C27F19B73001A0260 /* AppDelegate.swift in Sources */,
 				046D766C27F1AEE6001A0260 /* TodayCollectionViewHeader.swift in Sources */,
+				0433A22327F469AD00C64DF4 /* AppViewController.swift in Sources */,
 				046D764E27F19B73001A0260 /* SceneDelegate.swift in Sources */,
 				046D766A27F1A42C001A0260 /* TodayCollectionViewCell.swift in Sources */,
 			);
