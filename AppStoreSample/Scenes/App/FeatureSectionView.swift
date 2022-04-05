@@ -28,6 +28,8 @@ class FeatureSectionView: UIView {
         return collectionView
     }()
     
+    let separatorView = SeparatorView(frame: .zero)
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -68,12 +70,22 @@ extension FeatureSectionView: UICollectionViewDelegateFlowLayout, UICollectionVi
 
 extension FeatureSectionView {
     func setupViews() {
-        addSubview(collectionView)
+        [
+            collectionView,
+            separatorView
+        ].forEach {
+            addSubview($0)
+        }
         
         collectionView.snp.makeConstraints {
             $0.top.equalToSuperview().inset(16)
             $0.bottom.leading.trailing.equalToSuperview()
             $0.height.equalTo(snp.width)
+        }
+        
+        separatorView.snp.makeConstraints {
+            $0.top.equalTo(collectionView.snp.bottom).offset(16)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
     }
 }
