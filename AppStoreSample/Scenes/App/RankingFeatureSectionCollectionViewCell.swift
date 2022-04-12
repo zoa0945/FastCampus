@@ -33,7 +33,7 @@ class RankingFeatureSectionCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    let descriptonLabel: UILabel = {
+    let descriptionLabel: UILabel = {
         let label = UILabel()
         label.textColor = .secondaryLabel
         label.font = .systemFont(ofSize: 13, weight: .semibold)
@@ -61,26 +61,21 @@ class RankingFeatureSectionCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setup()
-        
-        appNameLabel.text = "오이마켓"
-        descriptonLabel.text = "집에서 잠자고 있는 물건들을 꺼내볼깨요?"
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func setup(rankingFeature: RankingFeature) {
+        setupLayout()
+
+        appNameLabel.text = rankingFeature.title
+        descriptionLabel.text = rankingFeature.description
+        infoLabel.isHidden = !rankingFeature.isInPurchaseApp
     }
 }
 
 extension RankingFeatureSectionCollectionViewCell {
-    func setup() {
+    func setupLayout() {
         [
             imageView,
             appNameLabel,
-            descriptonLabel,
+            descriptionLabel,
             downloadButton,
             infoLabel
         ].forEach {
@@ -99,7 +94,7 @@ extension RankingFeatureSectionCollectionViewCell {
             $0.trailing.equalTo(downloadButton.snp.leading).offset(8)
         }
         
-        descriptonLabel.snp.makeConstraints {
+        descriptionLabel.snp.makeConstraints {
             $0.leading.equalTo(appNameLabel.snp.leading)
             $0.top.equalTo(appNameLabel.snp.bottom).offset(4)
         }

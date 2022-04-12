@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 class TodayViewController: UIViewController {
+    var todayList: [Today] = []
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -32,22 +33,41 @@ class TodayViewController: UIViewController {
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        
+        fetchData()
+    }
+    
+    func fetchData() {
+        guard let url = Bundle.main.url(forResource: "Today", withExtension: "plist") else { return }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let result = try PropertyListDecoder().decode([Today].self, from: data)
+            todayList = result
+            
+        } catch {}
     }
 }
 
 extension TodayViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return todayList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodayCell", for: indexPath) as? TodayCollectionViewCell else { return UICollectionViewCell() }
         
+        let today = todayList[indexPath.row]
+        
+        cell.setup(today: today)
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = AppDetailViewController()
+        let today = todayList[indexPath.row]
+        
+        let vc = AppDetailViewController(today: today)
         present(vc, animated: true)
     }
     

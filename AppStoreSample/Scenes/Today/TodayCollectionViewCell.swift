@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class TodayCollectionViewCell: UICollectionViewCell {
     
@@ -14,7 +15,6 @@ class TodayCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .systemFont(ofSize: 24, weight: .bold)
         label.textColor = .white
-        label.text = "앱 이름"
         
         return label
     }()
@@ -23,7 +23,6 @@ class TodayCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14, weight: .bold)
         label.textColor = .white
-        label.text = "앱 소개"
         
         return label
     }()
@@ -32,7 +31,6 @@ class TodayCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14, weight: .bold)
         label.textColor = .white
-        label.text = "앱 설명"
         
         return label
     }()
@@ -47,20 +45,27 @@ class TodayCollectionViewCell: UICollectionViewCell {
         return image
     }()
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
+    func setup(today: Today) {
+        setupLayout()
         
-        [imageView, titleLabel, subTitleLabel, descriptionLabel].forEach {
-            contentView.addSubview($0)
-        }
-        
-        setup()
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 0.3
         layer.shadowRadius = 10
+        
+        titleLabel.text = today.title
+        subTitleLabel.text = today.subTitle
+        descriptionLabel.text = today.description
+        
+        if let imageURL = URL(string: today.imageURL) {
+            imageView.kf.setImage(with: imageURL)
+        }
     }
     
-    func setup() {
+    func setupLayout() {
+        [imageView, titleLabel, subTitleLabel, descriptionLabel].forEach {
+            addSubview($0)
+        }
+        
         subTitleLabel.snp.makeConstraints {
             $0.leading.trailing.top.equalToSuperview().inset(24)
         }

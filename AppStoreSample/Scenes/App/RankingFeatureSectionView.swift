@@ -9,11 +9,13 @@ import UIKit
 import SnapKit
 
 class RankingFeatureSectionView: UIView {
+    var rankingFeatureList: [RankingFeature] = []
     
     let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .label
         label.font = .systemFont(ofSize: 18, weight: .black)
+        label.text = "iPhone이 처음이라면"
         
         return label
     }()
@@ -55,22 +57,37 @@ class RankingFeatureSectionView: UIView {
         super.init(frame: frame)
         
         setup()
-        
-        titleLabel.text = "iPhone이 처음이라면"
+        fetchData()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func fetchData() {
+        guard let url = Bundle.main.url(forResource: "RankingFeature", withExtension: "plist") else { return }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let result = try PropertyListDecoder().decode([RankingFeature].self, from: data)
+            
+            rankingFeatureList = result
+            
+        } catch {}
+    }
 }
 
 extension RankingFeatureSectionView: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 9
+        return rankingFeatureList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RankingFeatureSectionCollectionViewCell", for: indexPath) as? RankingFeatureSectionCollectionViewCell else { return UICollectionViewCell() }
+        
+        let rankingFeature = rankingFeatureList[indexPath.item]
+        
+        cell.setup(rankingFeature: rankingFeature)
         
         return cell
     }
@@ -94,6 +111,7 @@ extension RankingFeatureSectionView {
         
         titleLabel.snp.makeConstraints {
             $0.top.leading.equalToSuperview().inset(16)
+            $0.trailing.equalTo(showAllAppsButton.snp.leading).offset(8)
         }
         
         showAllAppsButton.snp.makeConstraints {

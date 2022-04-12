@@ -7,8 +7,11 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class AppDetailViewController: UIViewController {
+    let today: Today
+    
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -50,8 +53,26 @@ class AppDetailViewController: UIViewController {
         button.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
         button.tintColor = .systemBlue
         
+        button.addTarget(self, action: #selector(didTapShareButton), for: .touchUpInside)
+        
         return button
     }()
+    
+    @objc func didTapShareButton() {
+        let activityItems: [Any] = [today.title]
+        let activityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        present(activityViewController, animated: true)
+    }
+    
+    init(today: Today) {
+        self.today = today
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,9 +80,11 @@ class AppDetailViewController: UIViewController {
         view.backgroundColor = .systemBackground
         setup()
         
-        imageView.backgroundColor = .lightGray
-        titleLabel.text = "title"
-        subtitleLabel.text = "subtitle"
+        titleLabel.text = today.title
+        subtitleLabel.text = today.subTitle
+        if let imageURL = URL(string: today.imageURL) {
+            imageView.kf.setImage(with: imageURL)
+        }
     }
 }
 
