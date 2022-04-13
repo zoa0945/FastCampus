@@ -9,11 +9,12 @@ import UIKit
 import SnapKit
 
 class StationSearchViewController: UIViewController {
-    private var numberOfCell = 0
+    private var numberOfCell: Int = 0
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.isHidden = true
         
         return tableView
@@ -47,7 +48,7 @@ class StationSearchViewController: UIViewController {
     }
 }
 
-extension StationSearchViewController: UITableViewDataSource {
+extension StationSearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numberOfCell
     }
@@ -58,12 +59,17 @@ extension StationSearchViewController: UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = InfoViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
-
 
 extension StationSearchViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         numberOfCell = 10
+        tableView.reloadData()
         tableView.isHidden = false
     }
     
