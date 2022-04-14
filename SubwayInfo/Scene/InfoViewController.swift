@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Alamofire
 
 class InfoViewController: UIViewController {
     lazy var refreshControl: UIRefreshControl = {
@@ -17,8 +18,16 @@ class InfoViewController: UIViewController {
     }()
     
     @objc func fetchData() {
-        print("REFRESH - fetchData")
-        refreshControl.endRefreshing()
+//        refreshControl.endRefreshing()
+        let url = "http://swopenapi.seoul.go.kr/api/subway/sample/json/realtimeStationArrival/0/5/왕십리"
+        AF
+            .request(url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
+            .responseDecodable(of: ArrivalModel.self) { response in
+                guard case .success(let data) = response.result else { return }
+                
+                print(data.arrivalList)
+            }
+            .resume()
     }
     
     lazy var collectionView: UICollectionView = {

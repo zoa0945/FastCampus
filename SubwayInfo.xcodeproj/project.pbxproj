@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0451139B28083C6100FCCDF5 /* ArrivalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451139A28083C6100FCCDF5 /* ArrivalModel.swift */; };
 		04A8D84B2805BD9C00406742 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8D84A2805BD9C00406742 /* AppDelegate.swift */; };
 		04A8D84D2805BD9C00406742 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8D84C2805BD9C00406742 /* SceneDelegate.swift */; };
 		04A8D84F2805BD9C00406742 /* StationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8D84E2805BD9C00406742 /* StationSearchViewController.swift */; };
@@ -16,9 +17,11 @@
 		04A8D8632805BE9600406742 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 04A8D8622805BE9600406742 /* Alamofire */; };
 		04A8D8672806E3F400406742 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8D8662806E3F400406742 /* InfoViewController.swift */; };
 		04A8D8692806E64300406742 /* InfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8D8682806E64300406742 /* InfoCollectionViewCell.swift */; };
+		04A8D86B28082D7C00406742 /* StationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A8D86A28082D7C00406742 /* StationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0451139A28083C6100FCCDF5 /* ArrivalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalModel.swift; sourceTree = "<group>"; };
 		04A8D8472805BD9C00406742 /* SubwayInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A8D84A2805BD9C00406742 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04A8D84C2805BD9C00406742 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		04A8D8582805BD9E00406742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A8D8662806E3F400406742 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		04A8D8682806E64300406742 /* InfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		04A8D86A28082D7C00406742 /* StationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0451139C28083C6B00FCCDF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0451139A28083C6100FCCDF5 /* ArrivalModel.swift */,
+				04A8D86A28082D7C00406742 /* StationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0451139D28083C7400FCCDF5 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				04A8D84E2805BD9C00406742 /* StationSearchViewController.swift */,
+				04A8D8662806E3F400406742 /* InfoViewController.swift */,
+				04A8D8682806E64300406742 /* InfoCollectionViewCell.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
 		04A8D83E2805BD9C00406742 = {
 			isa = PBXGroup;
 			children = (
@@ -64,9 +87,8 @@
 			children = (
 				04A8D84A2805BD9C00406742 /* AppDelegate.swift */,
 				04A8D84C2805BD9C00406742 /* SceneDelegate.swift */,
-				04A8D84E2805BD9C00406742 /* StationSearchViewController.swift */,
-				04A8D8662806E3F400406742 /* InfoViewController.swift */,
-				04A8D8682806E64300406742 /* InfoCollectionViewCell.swift */,
+				0451139D28083C7400FCCDF5 /* Scene */,
+				0451139C28083C6B00FCCDF5 /* Model */,
 				04A8D8532805BD9E00406742 /* Assets.xcassets */,
 				04A8D8552805BD9E00406742 /* LaunchScreen.storyboard */,
 				04A8D8582805BD9E00406742 /* Info.plist */,
@@ -152,10 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0451139B28083C6100FCCDF5 /* ArrivalModel.swift in Sources */,
 				04A8D8692806E64300406742 /* InfoCollectionViewCell.swift in Sources */,
 				04A8D84F2805BD9C00406742 /* StationSearchViewController.swift in Sources */,
 				04A8D84B2805BD9C00406742 /* AppDelegate.swift in Sources */,
 				04A8D8672806E3F400406742 /* InfoViewController.swift in Sources */,
+				04A8D86B28082D7C00406742 /* StationModel.swift in Sources */,
 				04A8D84D2805BD9C00406742 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
