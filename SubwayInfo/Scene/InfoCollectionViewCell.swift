@@ -25,7 +25,7 @@ class InfoCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    func setup() {
+    func setup(_ info: ArrivalInfo) {
         setupLayout()
         layer.cornerRadius = 12
         layer.shadowColor = UIColor.black.cgColor
@@ -34,8 +34,8 @@ class InfoCollectionViewCell: UICollectionViewCell {
         
         backgroundColor = .systemBackground
         
-        stationLabel.text = "천호역 - 암사방면"
-        infoLabel.text = "info"
+        stationLabel.text = info.direction
+        infoLabel.text = info.arrivalMsg1
     }
 }
 

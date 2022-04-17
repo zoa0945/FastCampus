@@ -10,6 +10,9 @@ import SnapKit
 import Alamofire
 
 class InfoViewController: UIViewController {
+    private let station: StationInfo
+    private var arrivalList: [ArrivalInfo] = []
+    
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(fetchData), for: .valueChanged)
@@ -18,13 +21,16 @@ class InfoViewController: UIViewController {
     }()
     
     @objc func fetchData() {
-//        refreshControl.endRefreshing()
-        let url = "http://swopenapi.seoul.go.kr/api/subway/sample/json/realtimeStationArrival/0/5/왕십리"
+        let stationName = station.stationName
+        let url = "http://swopenapi.seoul.go.kr/api/subway/sample/json/realtimeStationArrival/0/5/\(stationName.replacingOccurrences(of: "역", with: ""))"
         AF
             .request(url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
-            .responseDecodable(of: ArrivalModel.self) { response in
+            .responseDecodable(of: ArrivalModel.self) { [weak self] response in
+                self?.refreshControl.endRefreshing()
                 guard case .success(let data) = response.result else { return }
                 
+                self?.arrivalList = data.arrivalList.sorted { $0.direction < $1.direction }
+                self?.collectionView.reloadData()
                 print(data.arrivalList)
             }
             .resume()
@@ -50,7 +56,7 @@ class InfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "천호"
+        navigationItem.title = station.stationName
         navigationController?.navigationBar.prefersLargeTitles = true
         
         view.addSubview(collectionView)
@@ -58,18 +64,32 @@ class InfoViewController: UIViewController {
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        
+        fetchData()
+    }
+    
+    init(station: StationInfo) {
+        self.station = station
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
 extension InfoViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return arrivalList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InfoCollectionViewCell", for: indexPath) as? InfoCollectionViewCell else { return UICollectionViewCell() }
         
-        cell.setup()
+        let arrivalInfo = arrivalList[indexPath.row]
+        
+        cell.setup(arrivalInfo)
         
         return cell
     }

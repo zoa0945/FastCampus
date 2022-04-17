@@ -10,7 +10,7 @@ import SnapKit
 import Alamofire
 
 class StationSearchViewController: UIViewController {
-    private var numberOfCell: Int = 0
+    private var stations: [StationInfo] = []
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -26,8 +26,6 @@ class StationSearchViewController: UIViewController {
         
         setNavigationItems()
         setTableViewLayout()
-        
-        requestStationName()
     }
     
     private func setNavigationItems() {
@@ -53,48 +51,56 @@ class StationSearchViewController: UIViewController {
 
 extension StationSearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfCell
+        return stations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "\(indexPath)"
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+        let station = stations[indexPath.row]
+        
+        cell.textLabel?.text = station.stationName
+        cell.detailTextLabel?.text = station.lineNum
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = InfoViewController()
+        let station = stations[indexPath.row]
+        let vc = InfoViewController(station: station)
         navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 extension StationSearchViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        numberOfCell = 10
         tableView.reloadData()
         tableView.isHidden = false
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        numberOfCell = 0
         tableView.isHidden = true
+        stations = []
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        requestStationName(searchText)
     }
 }
 
 extension StationSearchViewController {
-    func requestStationName() {
-        let url = "http://openapi.seoul.go.kr:8088/sample/json/SearchInfoBySubwayNameService/1/5/서울역"
+    func requestStationName(_ term: String) {
+        let url = "http://openapi.seoul.go.kr:8088/sample/json/SearchInfoBySubwayNameService/1/5/\(term)"
         
         AF
             .request(url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
-            .responseDecodable(of: StationModel.self) { response in
+            .responseDecodable(of: StationModel.self) { [weak self] response in
                 guard case .success(let data) = response.result else {
                     // 에러 처리
                     return
                 }
                 
-                print(data.stations)
+                self?.stations = data.stations
+                self?.tableView.reloadData()
             }
             .resume()
     }
