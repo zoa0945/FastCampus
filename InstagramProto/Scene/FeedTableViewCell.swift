@@ -18,28 +18,28 @@ class FeedTableViewCell: UITableViewCell {
     
     let likeButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "heart"), for: .normal)
+        button.setImage(systemName: "heart")
         
         return button
     }()
     
     let commentButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "message"), for: .normal)
+        button.setImage(systemName: "message")
         
         return button
     }()
     
     let dmButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "paperplane"), for: .normal)
+        button.setImage(systemName: "paperplane")
         
         return button
     }()
     
     let bookMarkButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "bookmark"), for: .normal)
+        button.setImage(systemName: "bookmark")
         
         return button
     }()
@@ -58,12 +58,7 @@ class FeedTableViewCell: UITableViewCell {
         label.textColor = .label
         label.font = .systemFont(ofSize: 14, weight: .medium)
         label.numberOfLines = 5
-        label.text = """
-            diffffffffffffsidofkjosidjffffffffffffffffffoisdjf
-            oisdjfadieojfoiwjeoifjwoijef
-            oidjfoiwnoigjwoijfoijw
-            doijfoiejgoijwoiejg
-        """
+        label.text = "test"
         
         return label
     }()
@@ -78,12 +73,6 @@ class FeedTableViewCell: UITableViewCell {
     }()
     
     func setup() {
-        setupLayout()
-    }
-}
-
-extension FeedTableViewCell {
-    func setupLayout() {
         [
             postImageView,
             likeButton,
@@ -145,6 +134,7 @@ extension FeedTableViewCell {
             $0.top.equalTo(descriptionLabel.snp.bottom).offset(8)
             $0.leading.equalTo(likeButton.snp.leading)
             $0.trailing.equalTo(bookMarkButton.snp.trailing)
+            $0.bottom.equalToSuperview().inset(16)
         }
     }
 }

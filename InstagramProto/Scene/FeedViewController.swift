@@ -10,7 +10,7 @@ import SnapKit
 
 class FeedViewController: UIViewController {
     private lazy var feedTableView: UITableView = {
-        let tableView = UITableView(frame: .zero)
+        let tableView = UITableView()
         tableView.backgroundColor = .systemBackground
         tableView.separatorStyle = .none
         
@@ -40,6 +40,7 @@ extension FeedViewController {
         )
         navigationItem.rightBarButtonItem = uploadButton
     }
+    
     func setupTableView() {
         view.addSubview(feedTableView)
         feedTableView.snp.makeConstraints {
