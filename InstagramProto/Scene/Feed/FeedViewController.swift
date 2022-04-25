@@ -21,10 +21,11 @@ class FeedViewController: UIViewController {
         return tableView
     }()
     
-    private let imagePickerController: UIImagePickerController = {
+    private lazy var imagePickerController: UIImagePickerController = {
         let pickerController = UIImagePickerController()
         pickerController.allowsEditing = true
         pickerController.sourceType = .photoLibrary
+        pickerController.delegate = self
         
         return pickerController
     }()
@@ -37,7 +38,27 @@ class FeedViewController: UIViewController {
     }
 }
 
-extension FeedViewController {
+extension FeedViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        var seletedImage: UIImage?
+        
+        if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            seletedImage = editedImage
+        } else if let originalImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            seletedImage = originalImage
+        }
+        
+        picker.dismiss(animated: true) { [weak self] in
+            let uploadVC = UploadViewController(uploadImage: seletedImage ?? UIImage())
+            let navigationController = UINavigationController(rootViewController: uploadVC)
+            
+            navigationController.modalPresentationStyle = .fullScreen
+            self?.present(navigationController, animated: true)
+        }
+    }
+}
+
+private extension FeedViewController {
     func setupNavigationBar() {
         navigationItem.title = "Instagram"
         let uploadButton = UIBarButtonItem(
