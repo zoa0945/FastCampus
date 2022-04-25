@@ -20,6 +20,14 @@ class FeedViewController: UIViewController {
         
         return tableView
     }()
+    
+    private let imagePickerController: UIImagePickerController = {
+        let pickerController = UIImagePickerController()
+        pickerController.allowsEditing = true
+        pickerController.sourceType = .photoLibrary
+        
+        return pickerController
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +44,13 @@ extension FeedViewController {
             image: UIImage(systemName: "plus.app"),
             style: .plain,
             target: self,
-            action: nil
+            action: #selector(didTapUploadButton)
         )
         navigationItem.rightBarButtonItem = uploadButton
+    }
+    
+    @objc func didTapUploadButton() {
+        present(imagePickerController, animated: true)
     }
     
     func setupTableView() {
