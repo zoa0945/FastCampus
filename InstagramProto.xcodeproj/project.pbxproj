@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0410E413280D973D00C1B8AC /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410E412280D973D00C1B8AC /* FeedTableViewCell.swift */; };
 		0410E41528117BA100C1B8AC /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410E41428117BA000C1B8AC /* UIButton+.swift */; };
+		0410E4172813F8D500C1B8AC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410E4162813F8D500C1B8AC /* ProfileViewController.swift */; };
+		0410E41A2816AABB00C1B8AC /* ProfileDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410E4192816AABB00C1B8AC /* ProfileDataView.swift */; };
+		0410E41D2816AFC300C1B8AC /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0410E41C2816AFC300C1B8AC /* ProfileCollectionViewCell.swift */; };
 		047899DE280D9036006E3DD8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047899DD280D9036006E3DD8 /* AppDelegate.swift */; };
 		047899E0280D9036006E3DD8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047899DF280D9036006E3DD8 /* SceneDelegate.swift */; };
 		047899E2280D9036006E3DD8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047899E1280D9036006E3DD8 /* FeedViewController.swift */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		0410E412280D973D00C1B8AC /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		0410E41428117BA000C1B8AC /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		0410E4162813F8D500C1B8AC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0410E4192816AABB00C1B8AC /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
+		0410E41C2816AFC300C1B8AC /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		047899DA280D9036006E3DD8 /* InstagramProto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramProto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047899DD280D9036006E3DD8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047899DF280D9036006E3DD8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +49,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0410E4182816AAA100C1B8AC /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				047899E1280D9036006E3DD8 /* FeedViewController.swift */,
+				0410E412280D973D00C1B8AC /* FeedTableViewCell.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		0410E41B2816AB4000C1B8AC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0410E4162813F8D500C1B8AC /* ProfileViewController.swift */,
+				0410E41C2816AFC300C1B8AC /* ProfileCollectionViewCell.swift */,
+				0410E4192816AABB00C1B8AC /* ProfileDataView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		047899D1280D9036006E3DD8 = {
 			isa = PBXGroup;
 			children = (
@@ -75,8 +100,8 @@
 		047899F3280D9125006E3DD8 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				047899E1280D9036006E3DD8 /* FeedViewController.swift */,
-				0410E412280D973D00C1B8AC /* FeedTableViewCell.swift */,
+				0410E4182816AAA100C1B8AC /* Feed */,
+				0410E41B2816AB4000C1B8AC /* Profile */,
 				0410E41428117BA000C1B8AC /* UIButton+.swift */,
 				047899F1280D911D006E3DD8 /* TabBarController.swift */,
 			);
@@ -160,10 +185,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				047899E2280D9036006E3DD8 /* FeedViewController.swift in Sources */,
+				0410E41D2816AFC300C1B8AC /* ProfileCollectionViewCell.swift in Sources */,
 				0410E41528117BA100C1B8AC /* UIButton+.swift in Sources */,
 				047899F2280D911D006E3DD8 /* TabBarController.swift in Sources */,
 				047899DE280D9036006E3DD8 /* AppDelegate.swift in Sources */,
+				0410E4172813F8D500C1B8AC /* ProfileViewController.swift in Sources */,
 				047899E0280D9036006E3DD8 /* SceneDelegate.swift in Sources */,
+				0410E41A2816AABB00C1B8AC /* ProfileDataView.swift in Sources */,
 				0410E413280D973D00C1B8AC /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
