@@ -18,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		04E0A88728A0BDF900ED1510 /* CombiningOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombiningOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		04E0A88828A3D7FB00ED1510 /* TimeBasedOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TimeBasedOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		04FA2F6528A0BD3E0056C451 /* SearchBlogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchBlogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FA2F6828A0BD3E0056C451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04FA2F6A28A0BD3E0056C451 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +47,7 @@
 		04FA2F5C28A0BD3E0056C451 = {
 			isa = PBXGroup;
 			children = (
+				04E0A88828A3D7FB00ED1510 /* TimeBasedOperators.playground */,
 				04E0A88728A0BDF900ED1510 /* CombiningOperator.playground */,
 				04FA2F6728A0BD3E0056C451 /* SearchBlogApp */,
 				04FA2F6628A0BD3E0056C451 /* Products */,
