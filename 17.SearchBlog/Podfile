@@ -8,5 +8,7 @@ target 'SearchBlogApp' do
   # Pods for SearchBlogApp
   pod 'RxSwift', '6.5.0'
   pod 'RxCocoa', '6.5.0'
+  pod 'SnapKit', '~> 5.6.0'
+  pod 'Kingfisher', '~> 7.0'
 
 end
