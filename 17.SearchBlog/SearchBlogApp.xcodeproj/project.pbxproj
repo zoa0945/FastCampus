@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		04B92F2228A53450007D830B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B92F2128A53450007D830B /* SearchBar.swift */; };
+		04B92F2528A7C238007D830B /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B92F2428A7C238007D830B /* FilterView.swift */; };
+		04B92F2728A7C3A8007D830B /* BlogList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B92F2628A7C3A8007D830B /* BlogList.swift */; };
+		04B92F2928A7C3B6007D830B /* BlogListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B92F2828A7C3B6007D830B /* BlogListCell.swift */; };
+		04B92F2B28A7C3C0007D830B /* BlogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B92F2A28A7C3C0007D830B /* BlogData.swift */; };
 		04FA2F6928A0BD3E0056C451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA2F6828A0BD3E0056C451 /* AppDelegate.swift */; };
 		04FA2F6B28A0BD3E0056C451 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA2F6A28A0BD3E0056C451 /* SceneDelegate.swift */; };
 		04FA2F6D28A0BD3E0056C451 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA2F6C28A0BD3E0056C451 /* MainViewController.swift */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		04B92F2128A53450007D830B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		04B92F2428A7C238007D830B /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		04B92F2628A7C3A8007D830B /* BlogList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogList.swift; sourceTree = "<group>"; };
+		04B92F2828A7C3B6007D830B /* BlogListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCell.swift; sourceTree = "<group>"; };
+		04B92F2A28A7C3C0007D830B /* BlogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogData.swift; sourceTree = "<group>"; };
 		04E0A88728A0BDF900ED1510 /* CombiningOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombiningOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		04E0A88828A3D7FB00ED1510 /* TimeBasedOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TimeBasedOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		04FA2F6528A0BD3E0056C451 /* SearchBlogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchBlogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,9 +56,20 @@
 			isa = PBXGroup;
 			children = (
 				04FA2F6C28A0BD3E0056C451 /* MainViewController.swift */,
+				04B92F2428A7C238007D830B /* FilterView.swift */,
+				04B92F2628A7C3A8007D830B /* BlogList.swift */,
+				04B92F2828A7C3B6007D830B /* BlogListCell.swift */,
 				04B92F2128A53450007D830B /* SearchBar.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		04B92F2C28A7C3CF007D830B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				04B92F2A28A7C3C0007D830B /* BlogData.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		04FA2F5C28A0BD3E0056C451 = {
@@ -78,6 +97,7 @@
 			children = (
 				04FA2F6828A0BD3E0056C451 /* AppDelegate.swift */,
 				04FA2F6A28A0BD3E0056C451 /* SceneDelegate.swift */,
+				04B92F2C28A7C3CF007D830B /* Entity */,
 				04B92F2328A538F0007D830B /* Scene */,
 				04FA2F7128A0BD410056C451 /* Assets.xcassets */,
 				04FA2F7328A0BD410056C451 /* LaunchScreen.storyboard */,
@@ -218,9 +238,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FA2F6D28A0BD3E0056C451 /* MainViewController.swift in Sources */,
+				04B92F2928A7C3B6007D830B /* BlogListCell.swift in Sources */,
+				04B92F2728A7C3A8007D830B /* BlogList.swift in Sources */,
 				04B92F2228A53450007D830B /* SearchBar.swift in Sources */,
 				04FA2F6928A0BD3E0056C451 /* AppDelegate.swift in Sources */,
+				04B92F2528A7C238007D830B /* FilterView.swift in Sources */,
 				04FA2F6B28A0BD3E0056C451 /* SceneDelegate.swift in Sources */,
+				04B92F2B28A7C3C0007D830B /* BlogData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

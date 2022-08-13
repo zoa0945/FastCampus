@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     let disposeBag = DisposeBag()
     
     let searchBar = SearchBar()
-    let listView = UITableView()
+    let listView = BlogList()
 
     override func viewDidLoad() {
         super.viewDidLoad()
