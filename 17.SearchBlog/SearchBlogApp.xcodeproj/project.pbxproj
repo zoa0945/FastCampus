@@ -13,6 +13,7 @@
 		04B92F2928A7C3B6007D830B /* BlogListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B92F2828A7C3B6007D830B /* BlogListCell.swift */; };
 		04B92F2B28A7C3C0007D830B /* BlogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B92F2A28A7C3C0007D830B /* BlogData.swift */; };
 		04B92F2E28AA7102007D830B /* AlertActionConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B92F2D28AA7102007D830B /* AlertActionConvertable.swift */; };
+		04B92F3028AB9391007D830B /* DKBlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B92F2F28AB9391007D830B /* DKBlog.swift */; };
 		04FA2F6928A0BD3E0056C451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA2F6828A0BD3E0056C451 /* AppDelegate.swift */; };
 		04FA2F6B28A0BD3E0056C451 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA2F6A28A0BD3E0056C451 /* SceneDelegate.swift */; };
 		04FA2F6D28A0BD3E0056C451 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FA2F6C28A0BD3E0056C451 /* MainViewController.swift */; };
@@ -28,6 +29,7 @@
 		04B92F2828A7C3B6007D830B /* BlogListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCell.swift; sourceTree = "<group>"; };
 		04B92F2A28A7C3C0007D830B /* BlogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogData.swift; sourceTree = "<group>"; };
 		04B92F2D28AA7102007D830B /* AlertActionConvertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionConvertable.swift; sourceTree = "<group>"; };
+		04B92F2F28AB9391007D830B /* DKBlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKBlog.swift; sourceTree = "<group>"; };
 		04E0A88728A0BDF900ED1510 /* CombiningOperator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombiningOperator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		04E0A88828A3D7FB00ED1510 /* TimeBasedOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TimeBasedOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		04FA2F6528A0BD3E0056C451 /* SearchBlogApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchBlogApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +73,7 @@
 			children = (
 				04B92F2A28A7C3C0007D830B /* BlogData.swift */,
 				04B92F2D28AA7102007D830B /* AlertActionConvertable.swift */,
+				04B92F2F28AB9391007D830B /* DKBlog.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			files = (
 				04FA2F6D28A0BD3E0056C451 /* MainViewController.swift in Sources */,
 				04B92F2928A7C3B6007D830B /* BlogListCell.swift in Sources */,
+				04B92F3028AB9391007D830B /* DKBlog.swift in Sources */,
 				04B92F2728A7C3A8007D830B /* BlogList.swift in Sources */,
 				04B92F2228A53450007D830B /* SearchBar.swift in Sources */,
 				04FA2F6928A0BD3E0056C451 /* AppDelegate.swift in Sources */,
