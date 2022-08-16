@@ -55,15 +55,21 @@ class BlogListCell: UITableViewCell {
             addSubview($0)
         }
         
+        thumbnailImageView.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(8)
+            $0.width.height.equalTo(80)
+        }
+        
         titleLabel.snp.makeConstraints {
             $0.top.leading.equalToSuperview().inset(8)
-            $0.trailing.equalTo(thumbnailImageView.snp.leading).offset(8)
+            $0.trailing.equalTo(thumbnailImageView.snp.leading).offset(-8)
         }
         
         descriptionLabel.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(8)
             $0.leading.equalTo(titleLabel)
-            $0.trailing.equalTo(thumbnailImageView.snp.leading).offset(8)
+            $0.trailing.equalTo(thumbnailImageView.snp.leading).offset(-8)
         }
         
         dateLabel.snp.makeConstraints {

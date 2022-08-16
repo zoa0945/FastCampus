@@ -64,10 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				04FA2F6C28A0BD3E0056C451 /* MainViewController.swift */,
-				04B92F2428A7C238007D830B /* FilterView.swift */,
-				04B92F2628A7C3A8007D830B /* BlogList.swift */,
-				04B92F2828A7C3B6007D830B /* BlogListCell.swift */,
-				04B92F2128A53450007D830B /* SearchBar.swift */,
+				04B92F3628AB9C25007D830B /* Subcomponents */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -89,6 +86,33 @@
 				04B92F3428AB9935007D830B /* SearchBlogNetwork.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		04B92F3628AB9C25007D830B /* Subcomponents */ = {
+			isa = PBXGroup;
+			children = (
+				04B92F2128A53450007D830B /* SearchBar.swift */,
+				04B92F3728AB9C52007D830B /* ListView */,
+			);
+			path = Subcomponents;
+			sourceTree = "<group>";
+		};
+		04B92F3728AB9C52007D830B /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				04B92F2628A7C3A8007D830B /* BlogList.swift */,
+				04B92F3828AB9C87007D830B /* Subcomponents */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		04B92F3828AB9C87007D830B /* Subcomponents */ = {
+			isa = PBXGroup;
+			children = (
+				04B92F2428A7C238007D830B /* FilterView.swift */,
+				04B92F2828A7C3B6007D830B /* BlogListCell.swift */,
+			);
+			path = Subcomponents;
 			sourceTree = "<group>";
 		};
 		04FA2F5C28A0BD3E0056C451 = {
@@ -116,8 +140,8 @@
 			children = (
 				04FA2F6828A0BD3E0056C451 /* AppDelegate.swift */,
 				04FA2F6A28A0BD3E0056C451 /* SceneDelegate.swift */,
-				04B92F3328AB969D007D830B /* Network */,
 				04B92F2C28A7C3CF007D830B /* Entity */,
+				04B92F3328AB969D007D830B /* Network */,
 				04B92F2328A538F0007D830B /* Scene */,
 				04FA2F7128A0BD410056C451 /* Assets.xcassets */,
 				04FA2F7328A0BD410056C451 /* LaunchScreen.storyboard */,
