@@ -53,7 +53,7 @@ olympic.onNext(us)
 korea.score.onNext(10)
 us.score.onNext(9)
 
-print("-----faltMapLatest-----")
+print("-----flatMapLatest-----")
 struct highJump: Athlete {
     var score: BehaviorSubject<Int>
 }
