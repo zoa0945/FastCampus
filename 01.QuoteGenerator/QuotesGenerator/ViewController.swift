@@ -41,8 +41,11 @@
  */
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
+    let disposeBag = DisposeBag()
 
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -54,17 +57,25 @@ class ViewController: UIViewController {
         Quote(contents: "몇 번이라도 좋다! 이 끔찍한 생이여... 다시!", name: "니체")
     ]
     
+    let quote = PublishSubject<Quote>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        quote
+            .subscribe(onNext: {
+                self.quoteLabel.text = $0.contents
+                self.nameLabel.text = $0.name
+            })
+            .disposed(by: disposeBag)
     }
 
     @IBAction func tapQuoteGeneratorButton(_ sender: Any) {
         // 랜덤 난수 발생 (0~4)
         let random = Int(arc4random_uniform(5))
-        let quote = quotes[random]
-        self.quoteLabel.text = quote.contents
-        self.nameLabel.text = quote.name
+        
+        quote.onNext(quotes[random])
     }
 }
 
