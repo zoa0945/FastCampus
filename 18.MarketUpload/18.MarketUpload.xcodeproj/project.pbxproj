@@ -18,6 +18,8 @@
 		8E6D8DF428E4249D0070F0D6 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D8DF328E4249D0070F0D6 /* Category.swift */; };
 		8E6D8DF728E424CA0070F0D6 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D8DF628E424CA0070F0D6 /* CategoryViewModel.swift */; };
 		8E6D8DF928E4266A0070F0D6 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D8DF828E4266A0070F0D6 /* CategoryListViewController.swift */; };
+		8E6D8DFC28E42B200070F0D6 /* PriceTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D8DFB28E42B200070F0D6 /* PriceTextFieldCell.swift */; };
+		8E6D8DFE28E42B3C0070F0D6 /* PriceTextFieldCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D8DFD28E42B3C0070F0D6 /* PriceTextFieldCellViewModel.swift */; };
 		A16B246DCD85C338CDE3107D /* Pods_18_MarketUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95634603FF7B71675DBBE71E /* Pods_18_MarketUpload.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		8E6D8DF328E4249D0070F0D6 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		8E6D8DF628E424CA0070F0D6 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		8E6D8DF828E4266A0070F0D6 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
+		8E6D8DFB28E42B200070F0D6 /* PriceTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCell.swift; sourceTree = "<group>"; };
+		8E6D8DFD28E42B3C0070F0D6 /* PriceTextFieldCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCellViewModel.swift; sourceTree = "<group>"; };
 		95634603FF7B71675DBBE71E /* Pods_18_MarketUpload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_18_MarketUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF572BB42E5F76C19E8C2BB3 /* Pods-18.MarketUpload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-18.MarketUpload.debug.xcconfig"; path = "Target Support Files/Pods-18.MarketUpload/Pods-18.MarketUpload.debug.xcconfig"; sourceTree = "<group>"; };
 		FBA803E63777382FD47CB30B /* Pods-18.MarketUpload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-18.MarketUpload.release.xcconfig"; path = "Target Support Files/Pods-18.MarketUpload/Pods-18.MarketUpload.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				8E6D8DEA28E41F250070F0D6 /* MainViewModel.swift */,
 				8E6D8DF228E4236A0070F0D6 /* TitleTextField */,
 				8E6D8DFA28E428640070F0D6 /* CategoryView */,
+				8E6D8DFB28E42B200070F0D6 /* PriceTextFieldCell.swift */,
+				8E6D8DFD28E42B3C0070F0D6 /* PriceTextFieldCellViewModel.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -261,12 +267,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E6D8DE928E2F81E0070F0D6 /* MainViewController.swift in Sources */,
+				8E6D8DFC28E42B200070F0D6 /* PriceTextFieldCell.swift in Sources */,
 				8E6D8DF128E423640070F0D6 /* TitleTextFieldCellViewModel.swift in Sources */,
 				8E6D8DF928E4266A0070F0D6 /* CategoryListViewController.swift in Sources */,
 				8E0FC3B128E2F4E700B9511F /* AppDelegate.swift in Sources */,
 				8E0FC3B328E2F4E700B9511F /* SceneDelegate.swift in Sources */,
 				8E6D8DF728E424CA0070F0D6 /* CategoryViewModel.swift in Sources */,
 				8E6D8DEF28E423560070F0D6 /* TitleTextFieldCell.swift in Sources */,
+				8E6D8DFE28E42B3C0070F0D6 /* PriceTextFieldCellViewModel.swift in Sources */,
 				8E6D8DEB28E41F250070F0D6 /* MainViewModel.swift in Sources */,
 				8E6D8DF428E4249D0070F0D6 /* Category.swift in Sources */,
 			);
