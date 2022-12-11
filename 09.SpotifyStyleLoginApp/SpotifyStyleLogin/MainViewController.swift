@@ -13,7 +13,6 @@ class MainViewController: UIViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var changePasswordButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

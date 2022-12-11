@@ -120,8 +120,7 @@
 				8E6D8DEA28E41F250070F0D6 /* MainViewModel.swift */,
 				8E6D8DF228E4236A0070F0D6 /* TitleTextField */,
 				8E6D8DFA28E428640070F0D6 /* CategoryView */,
-				8E6D8DFB28E42B200070F0D6 /* PriceTextFieldCell.swift */,
-				8E6D8DFD28E42B3C0070F0D6 /* PriceTextFieldCellViewModel.swift */,
+				8E6D8DFF28E42ECF0070F0D6 /* PriceTextField */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -150,6 +149,15 @@
 				8E6D8DF828E4266A0070F0D6 /* CategoryListViewController.swift */,
 			);
 			path = CategoryView;
+			sourceTree = "<group>";
+		};
+		8E6D8DFF28E42ECF0070F0D6 /* PriceTextField */ = {
+			isa = PBXGroup;
+			children = (
+				8E6D8DFB28E42B200070F0D6 /* PriceTextFieldCell.swift */,
+				8E6D8DFD28E42B3C0070F0D6 /* PriceTextFieldCellViewModel.swift */,
+			);
+			path = PriceTextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
