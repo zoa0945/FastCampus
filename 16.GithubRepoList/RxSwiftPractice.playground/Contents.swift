@@ -1,7 +1,7 @@
 import Foundation
 import RxSwift
 
-// 하나의 element를 방출
+// just: 하나의 element를 방출
 print("=====Just=====")
 Observable<Int>.just(1)
     .subscribe {
@@ -10,7 +10,7 @@ Observable<Int>.just(1)
         }
     }
 
-// 여러개의 element를 순차적으로 방출
+// of: 여러개의 element를 순차적으로 방출
 print("=====Of=====")
 Observable<Int>.of(1, 2, 3, 4, 5)
     .subscribe {
@@ -26,7 +26,7 @@ Observable.of([1, 2, 3, 4, 5])
         }
     }
 
-// Array형태의 element의 각각의 요소를 방출
+// from: Array형태의 element의 각각의 요소를 방출
 print("=====From=====")
 Observable.from([1, 2, 3, 4, 5])
     .subscribe {
@@ -35,12 +35,14 @@ Observable.from([1, 2, 3, 4, 5])
         }
     }
 
+// 이벤트 타입을 명시하지 않으면 모든 이벤트를 전달받음
 print("=====subscribe1=====")
 Observable.of(1, 2, 3)
     .subscribe {
         print($0)
     }
 
+// 명시된 이벤트만 전달받음 (onNext, onError, onCompleted)
 print("=====subscribe2=====")
 Observable.of(1, 2, 3)
     .subscribe(onNext: {
@@ -54,6 +56,7 @@ Observable<Void>.empty()
         print($0)
     }
 
+// 정상적으로 작동은 하지만 아무것도 방출하지 않음
 print("=====never=====")
 Observable.never()
     .debug("never")
@@ -63,6 +66,7 @@ Observable.never()
         print("completed")
     }
 
+// start부터 count만큼 sequence를 생성
 print("=====range=====")
 Observable.range(start: 1, count: 9)
     .subscribe(onNext: {
@@ -119,6 +123,7 @@ Observable.create { observer -> Disposable in
 }
 .disposed(by: disposeBag)
 
+// Observable을 만드는 대신 각 구독자에게 새롭게 Observable 항목을 제공하는 Observable Factory를 만드는 방식
 print("=====deferred1=====")
 Observable.deferred {
     Observable.of(1, 2, 3)
