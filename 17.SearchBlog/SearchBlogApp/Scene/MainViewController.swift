@@ -10,6 +10,10 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
+// CocoaFramework: iOS 앱 개발할때 사용하는 Framework
+// MacOS, iPadOS 와 같이 애플 생태계의 운영체제에서 개발할 때 필수적으로 사용하는 Framework
+// 기본적인 자료형과 Method가 정의되어 있는 Foundation
+// 주로 UI 개발에 사용되는 ApplicationKit에 기반한 UIKit으로 이루어져 있음
 class MainViewController: UIViewController {
     let disposeBag = DisposeBag()
     

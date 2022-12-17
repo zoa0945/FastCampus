@@ -65,6 +65,8 @@ class SearchBar: UISearchBar {
     }
 }
 
+// RxExtension: 기존의 속성들을 Rx에 맞게 변환 할 수 있게 해줌
+// 기존에 CocoaFramework에 있는 객체들을 custom해서 Rx에서 사용할 수 있게 해줌
 extension Reactive where Base: SearchBar {
     var endEditing: Binder<Void> {
         return Binder(base) { base, _ in
