@@ -10,6 +10,23 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
+// MVC vs MVVM
+// MVC: Model, View, Controller 각각의 객체가 앱에서 수행하는
+// 역할을 정의하고 이들이 서로 통신하는 방식을 정의하게 됨
+// 각각의 객체는 추상적으로 다른 유형과 분리되고 이러한 경계를 넘어 다른 유형의 객체와 통신하게 됨
+// 재사용 가능성이 높고 인터페이스가 더 잘 정의됨
+// 쉽게 확장 가능함
+// 그러나 CocoaFramework의 경우 UIViewController가 View와 Controller의 역할을 같이 하기 때문에
+// 이 둘을 완전히 분리하기 어려움
+// UIViewController도 자신의 View를 가지고 있어 온전한 Controller의 멱할만 하지 못함
+// 앱의 크키가 커질수록 ViewController의 크기가 필연적으로 커지게 됨
+
+// MVVM: Model, View, ViewModel로 이루어져 있음
+// View: UIView, UIViewController
+// View는 각자의 ViewModel을 소유하게 됨
+// View와 ViewModel은 Binding되어 데이터, 사용자 액션을 주고 받게 됨
+// ViewModel은 자신의 Model을 가질 수 있음 Model을 통해 비즈니스 로직을 처리하게 됨
+
 class MainViewController: UIViewController {
     let disposeBag = DisposeBag()
     
