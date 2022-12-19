@@ -38,7 +38,6 @@ class CategoryListViewController: UIViewController {
         viewModel.pop
             .emit(onNext: { [weak self] _ in
                 self?.navigationController?.popViewController(animated: true)
-                
             })
             .disposed(by: disposeBag)
         

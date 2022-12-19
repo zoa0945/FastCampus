@@ -12,10 +12,16 @@ import RxCocoa
 class CategoryViewModel {
     let disposeBag = DisposeBag()
     
+    // ViewModel이 View로 넘겨주는 데이터
+    // 카테고리들을 나타낼 데이터
     let cellData: Driver<[Category]>
+    // 카테고리를 선택했을때 pop되는 이벤트
     let pop: Signal<Void>
-    let itemSelected = PublishRelay<Int>()
     
+    // View가 ViewModel로 넘겨주는 데이터
+    // 선택된 카테고리의 row값
+    let itemSelected = PublishRelay<Int>()
+    // 선택된 카테고리를 MainViewController에 전달하기 위해 저장해둘 subject
     let selectedCategory = PublishSubject<Category>()
     
     init() {

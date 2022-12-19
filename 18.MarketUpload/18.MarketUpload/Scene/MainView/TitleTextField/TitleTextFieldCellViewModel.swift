@@ -9,6 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+// PublishRelay: UIEvent를 받아 방출
 class TitleTextFieldViewModel {
     let titleText = PublishRelay<String?>()
 }
