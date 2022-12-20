@@ -64,6 +64,7 @@ class MainViewController: UIViewController {
         tableView.register(TitleTextFieldCell.self, forCellReuseIdentifier: "TitleTextFieldCell")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CategoryListCell")
         tableView.register(PriceTextFieldCell.self, forCellReuseIdentifier: "PriceTextFieldCell")
+        tableView.register(DetailWriteFormCell.self, forCellReuseIdentifier: "DetailWriteFormCell")
     }
     
     private func layout() {
