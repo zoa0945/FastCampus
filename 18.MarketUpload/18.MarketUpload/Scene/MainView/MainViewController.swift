@@ -50,6 +50,7 @@ class MainViewController: UIViewController {
                 switch row {
                 case 0:
                     let cell = tv.dequeueReusableCell(withIdentifier: "TitleTextFieldCell", for: IndexPath(row: row, section: 0)) as! TitleTextFieldCell
+
                     // selectionStyle = .none -> 셀 선택시 회색 음영이 나타나지 않게 해줌
                     cell.selectionStyle = .none
                     cell.titleInputField.placeholder = data
@@ -57,7 +58,7 @@ class MainViewController: UIViewController {
                     return cell
                 case 1:
                     let cell = tv.dequeueReusableCell(withIdentifier: "CategoryListCell", for: IndexPath(row: row, section: 0))
-                    
+
                     // cell.accessoryType = .disclosureIndicator -> 셀 오른쪽에 꺽쇠모양 설정
                     cell.selectionStyle = .none
                     cell.textLabel?.text = data
@@ -65,14 +66,14 @@ class MainViewController: UIViewController {
                     return cell
                 case 2:
                     let cell = tv.dequeueReusableCell(withIdentifier: "PriceTextFieldCell", for: IndexPath(row: row, section: 0)) as! PriceTextFieldCell
-                    
+
                     cell.selectionStyle = .none
                     cell.priceInputField.placeholder = data
                     cell.bind(viewModel: viewModel.priceTextFieldViewModel)
                     return cell
                 case 3:
                     let cell = tv.dequeueReusableCell(withIdentifier: "DetailWriteFormCell", for: IndexPath(row: row, section: 0)) as! DetailWriteFormCell
-                    
+
                     cell.selectionStyle = .none
                     cell.contentInputView.text = data
                     cell.bind(viewModel: viewModel.detailWriteFormCellViewModel)
@@ -81,6 +82,27 @@ class MainViewController: UIViewController {
                     fatalError()
                 }
             }
+            .disposed(by: disposeBag)
+        
+        viewModel.presentAlert
+            .emit(to: self.rx.setAlert)
+            .disposed(by: disposeBag)
+        
+        viewModel.push
+            .drive(onNext: { viewModel in
+                let viewController = CategoryListViewController()
+                viewController.bind(viewModel: viewModel)
+                self.show(viewController, sender: nil)
+            })
+            .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .map { $0.row }
+            .bind(to: viewModel.itemSelected)
+            .disposed(by: disposeBag)
+        
+        submitButton.rx.tap
+            .bind(to: viewModel.submitButtonTapped)
             .disposed(by: disposeBag)
     }
     

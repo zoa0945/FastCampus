@@ -25,7 +25,7 @@ class DetailWriteFormCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func bind(_ viewModel: DetailWriteFormCellViewModel) {
+    func bind(viewModel: DetailWriteFormCellViewModel) {
         contentInputView.rx.text
             .bind(to: viewModel.contentValue)
             .disposed(by: disposeBag)
