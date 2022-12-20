@@ -45,7 +45,43 @@ class MainViewController: UIViewController {
     }
     
     func bind(viewModel: MainViewModel) {
-        
+        viewModel.cellData
+            .drive(tableView.rx.items) { tv, row, data in
+                switch row {
+                case 0:
+                    let cell = tv.dequeueReusableCell(withIdentifier: "TitleTextFieldCell", for: IndexPath(row: row, section: 0)) as! TitleTextFieldCell
+                    // selectionStyle = .none -> 셀 선택시 회색 음영이 나타나지 않게 해줌
+                    cell.selectionStyle = .none
+                    cell.titleInputField.placeholder = data
+                    cell.bind(viewModel: viewModel.titleTextFieldViewModel)
+                    return cell
+                case 1:
+                    let cell = tv.dequeueReusableCell(withIdentifier: "CategoryListCell", for: IndexPath(row: row, section: 0))
+                    
+                    // cell.accessoryType = .disclosureIndicator -> 셀 오른쪽에 꺽쇠모양 설정
+                    cell.selectionStyle = .none
+                    cell.textLabel?.text = data
+                    cell.accessoryType = .disclosureIndicator
+                    return cell
+                case 2:
+                    let cell = tv.dequeueReusableCell(withIdentifier: "PriceTextFieldCell", for: IndexPath(row: row, section: 0)) as! PriceTextFieldCell
+                    
+                    cell.selectionStyle = .none
+                    cell.priceInputField.placeholder = data
+                    cell.bind(viewModel: viewModel.priceTextFieldViewModel)
+                    return cell
+                case 3:
+                    let cell = tv.dequeueReusableCell(withIdentifier: "DetailWriteFormCell", for: IndexPath(row: row, section: 0)) as! DetailWriteFormCell
+                    
+                    cell.selectionStyle = .none
+                    cell.contentInputView.text = data
+                    cell.bind(viewModel: viewModel.detailWriteFormCellViewModel)
+                    return cell
+                default:
+                    fatalError()
+                }
+            }
+            .disposed(by: disposeBag)
     }
     
     private func attribute() {
