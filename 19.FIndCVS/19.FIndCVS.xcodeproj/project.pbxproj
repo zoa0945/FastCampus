@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		040BD6DC56159328DF8FC2F1 /* Pods_19_FIndCVS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07011525119F269D87FA0A3D /* Pods_19_FIndCVS.framework */; };
 		8E1831BA2959AC390085AC16 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1831B92959AC390085AC16 /* MainViewModel.swift */; };
+		8E1831BC295B09140085AC16 /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1831BB295B09140085AC16 /* MTMapViewError.swift */; };
 		8E4CFD7C2955E4290052D65C /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CFD7B2955E4290052D65C /* LocationData.swift */; };
 		8E4CFD7F2955E4630052D65C /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CFD7E2955E4630052D65C /* KLDocument.swift */; };
 		8E4CFD812955E5170052D65C /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CFD802955E5170052D65C /* DetailListCellData.swift */; };
@@ -58,6 +59,7 @@
 		07011525119F269D87FA0A3D /* Pods_19_FIndCVS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_19_FIndCVS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30987CF77E9E82BD77E6B344 /* Pods-19.FIndCVS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-19.FIndCVS.release.xcconfig"; path = "Target Support Files/Pods-19.FIndCVS/Pods-19.FIndCVS.release.xcconfig"; sourceTree = "<group>"; };
 		8E1831B92959AC390085AC16 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		8E1831BB295B09140085AC16 /* MTMapViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewError.swift; sourceTree = "<group>"; };
 		8E4CFD7B2955E4290052D65C /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
 		8E4CFD7E2955E4630052D65C /* KLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLDocument.swift; sourceTree = "<group>"; };
 		8E4CFD802955E5170052D65C /* DetailListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCellData.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				8E77B4C729533B8E00CEBBC8 /* AppDelegate.swift */,
 				8E77B4C929533B8E00CEBBC8 /* SceneDelegate.swift */,
 				8EC68AC7295886A6001F3C77 /* MainViewController.swift */,
+				8E1831BB295B09140085AC16 /* MTMapViewError.swift */,
 				8E1831B92959AC390085AC16 /* MainViewModel.swift */,
 				8E4CFD7D2955E4330052D65C /* Entity */,
 				8E77B4D029533B9100CEBBC8 /* Assets.xcassets */,
@@ -407,6 +410,7 @@
 				8E1831BA2959AC390085AC16 /* MainViewModel.swift in Sources */,
 				8E4CFD7C2955E4290052D65C /* LocationData.swift in Sources */,
 				8E4CFD7F2955E4630052D65C /* KLDocument.swift in Sources */,
+				8E1831BC295B09140085AC16 /* MTMapViewError.swift in Sources */,
 				8E77B4C829533B8E00CEBBC8 /* AppDelegate.swift in Sources */,
 				8EC68AC8295886A6001F3C77 /* MainViewController.swift in Sources */,
 				8E4CFD812955E5170052D65C /* DetailListCellData.swift in Sources */,
