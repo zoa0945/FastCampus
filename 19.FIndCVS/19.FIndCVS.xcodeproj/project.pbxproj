@@ -14,6 +14,8 @@
 		8E4CFD7F2955E4630052D65C /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CFD7E2955E4630052D65C /* KLDocument.swift */; };
 		8E4CFD812955E5170052D65C /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CFD802955E5170052D65C /* DetailListCellData.swift */; };
 		8E6551B52A17AB9100574842 /* DetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6551B42A17AB9100574842 /* DetailListCell.swift */; };
+		8E6551B72A17B58900574842 /* DetailListBackgroudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6551B62A17B58900574842 /* DetailListBackgroudView.swift */; };
+		8E6551B92A17B59B00574842 /* DetailListBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6551B82A17B59B00574842 /* DetailListBackgroundViewModel.swift */; };
 		8E77B4C829533B8E00CEBBC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E77B4C729533B8E00CEBBC8 /* AppDelegate.swift */; };
 		8E77B4CA29533B8E00CEBBC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E77B4C929533B8E00CEBBC8 /* SceneDelegate.swift */; };
 		8E77B4D129533B9100CEBBC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E77B4D029533B9100CEBBC8 /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 		8E4CFD7E2955E4630052D65C /* KLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLDocument.swift; sourceTree = "<group>"; };
 		8E4CFD802955E5170052D65C /* DetailListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCellData.swift; sourceTree = "<group>"; };
 		8E6551B42A17AB9100574842 /* DetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCell.swift; sourceTree = "<group>"; };
+		8E6551B62A17B58900574842 /* DetailListBackgroudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroudView.swift; sourceTree = "<group>"; };
+		8E6551B82A17B59B00574842 /* DetailListBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundViewModel.swift; sourceTree = "<group>"; };
 		8E77B4C429533B8E00CEBBC8 /* 19.FIndCVS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 19.FIndCVS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E77B4C729533B8E00CEBBC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E77B4C929533B8E00CEBBC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 			children = (
 				8E5F74D5299E0EAF001D81A4 /* MainView */,
 				8E6551B42A17AB9100574842 /* DetailListCell.swift */,
+				8E6551B62A17B58900574842 /* DetailListBackgroudView.swift */,
+				8E6551B82A17B59B00574842 /* DetailListBackgroundViewModel.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -428,6 +434,8 @@
 			files = (
 				8E1831BA2959AC390085AC16 /* MainViewModel.swift in Sources */,
 				8E4CFD7C2955E4290052D65C /* LocationData.swift in Sources */,
+				8E6551B92A17B59B00574842 /* DetailListBackgroundViewModel.swift in Sources */,
+				8E6551B72A17B58900574842 /* DetailListBackgroudView.swift in Sources */,
 				8E4CFD7F2955E4630052D65C /* KLDocument.swift in Sources */,
 				8E1831BC295B09140085AC16 /* MTMapViewError.swift in Sources */,
 				8E6551B52A17AB9100574842 /* DetailListCell.swift in Sources */,
