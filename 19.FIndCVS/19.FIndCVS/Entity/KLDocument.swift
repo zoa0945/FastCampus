@@ -19,6 +19,6 @@ struct KLDocument: Codable {
         case x, y, distance
         case placeName = "place_name"
         case addressName = "address_name"
-        case roadAddressName = "read_address_name"
+        case roadAddressName = "road_address_name"
     }
 }

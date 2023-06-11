@@ -10,6 +10,8 @@
 		040BD6DC56159328DF8FC2F1 /* Pods_19_FIndCVS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07011525119F269D87FA0A3D /* Pods_19_FIndCVS.framework */; };
 		8E1831BA2959AC390085AC16 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1831B92959AC390085AC16 /* MainViewModel.swift */; };
 		8E1831BC295B09140085AC16 /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1831BB295B09140085AC16 /* MTMapViewError.swift */; };
+		8E20ADBE2A35838B0057B256 /* LocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20ADBD2A35838B0057B256 /* LocalNetwork.swift */; };
+		8E20ADC02A3586D80057B256 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20ADBF2A3586D80057B256 /* MainModel.swift */; };
 		8E4CFD7C2955E4290052D65C /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CFD7B2955E4290052D65C /* LocationData.swift */; };
 		8E4CFD7F2955E4630052D65C /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CFD7E2955E4630052D65C /* KLDocument.swift */; };
 		8E4CFD812955E5170052D65C /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4CFD802955E5170052D65C /* DetailListCellData.swift */; };
@@ -56,6 +58,7 @@
 		8EC68B0D29588854001F3C77 /* daum_th_line.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC68AF129588853001F3C77 /* daum_th_line.png */; };
 		8EC68B0E29588854001F3C77 /* map_pin_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8EC68AF229588853001F3C77 /* map_pin_shadow.png */; };
 		8EC68B0F29588854001F3C77 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EC68AF329588853001F3C77 /* DaumMap.framework */; };
+		8ECCA4592A288B0100381823 /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECCA4582A288B0100381823 /* SearchAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,8 @@
 		30987CF77E9E82BD77E6B344 /* Pods-19.FIndCVS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-19.FIndCVS.release.xcconfig"; path = "Target Support Files/Pods-19.FIndCVS/Pods-19.FIndCVS.release.xcconfig"; sourceTree = "<group>"; };
 		8E1831B92959AC390085AC16 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		8E1831BB295B09140085AC16 /* MTMapViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewError.swift; sourceTree = "<group>"; };
+		8E20ADBD2A35838B0057B256 /* LocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetwork.swift; sourceTree = "<group>"; };
+		8E20ADBF2A3586D80057B256 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		8E4CFD7B2955E4290052D65C /* LocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationData.swift; sourceTree = "<group>"; };
 		8E4CFD7E2955E4630052D65C /* KLDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLDocument.swift; sourceTree = "<group>"; };
 		8E4CFD802955E5170052D65C /* DetailListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCellData.swift; sourceTree = "<group>"; };
@@ -120,6 +125,7 @@
 		8EC68AF129588853001F3C77 /* daum_th_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daum_th_line.png; sourceTree = "<group>"; };
 		8EC68AF229588853001F3C77 /* map_pin_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_shadow.png; sourceTree = "<group>"; };
 		8EC68AF329588853001F3C77 /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DaumMap.framework; sourceTree = "<group>"; };
+		8ECCA4582A288B0100381823 /* SearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
 		98EBFCA9F36660DE2BEC24E7 /* Pods-19.FIndCVS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-19.FIndCVS.debug.xcconfig"; path = "Target Support Files/Pods-19.FIndCVS/Pods-19.FIndCVS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,9 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				8E5F74D5299E0EAF001D81A4 /* MainView */,
-				8E6551B42A17AB9100574842 /* DetailListCell.swift */,
-				8E6551B62A17B58900574842 /* DetailListBackgroudView.swift */,
-				8E6551B82A17B59B00574842 /* DetailListBackgroundViewModel.swift */,
+				8ECCA45B2A288B3700381823 /* DetailListView */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -168,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC68AC7295886A6001F3C77 /* MainViewController.swift */,
+				8E20ADBF2A3586D80057B256 /* MainModel.swift */,
 				8E1831B92959AC390085AC16 /* MainViewModel.swift */,
 			);
 			path = MainView;
@@ -197,6 +202,7 @@
 				8E77B4C729533B8E00CEBBC8 /* AppDelegate.swift */,
 				8E77B4C929533B8E00CEBBC8 /* SceneDelegate.swift */,
 				8E1831BB295B09140085AC16 /* MTMapViewError.swift */,
+				8ECCA45A2A288B1200381823 /* Network */,
 				8E5F74D4299E0E93001D81A4 /* Scene */,
 				8E4CFD7D2955E4330052D65C /* Entity */,
 				8E77B4D029533B9100CEBBC8 /* Assets.xcassets */,
@@ -280,6 +286,25 @@
 				8EC68AE629588853001F3C77 /* MTMapCircle.h */,
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		8ECCA45A2A288B1200381823 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8ECCA4582A288B0100381823 /* SearchAPI.swift */,
+				8E20ADBD2A35838B0057B256 /* LocalNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8ECCA45B2A288B3700381823 /* DetailListView */ = {
+			isa = PBXGroup;
+			children = (
+				8E6551B42A17AB9100574842 /* DetailListCell.swift */,
+				8E6551B62A17B58900574842 /* DetailListBackgroudView.swift */,
+				8E6551B82A17B59B00574842 /* DetailListBackgroundViewModel.swift */,
+			);
+			path = DetailListView;
 			sourceTree = "<group>";
 		};
 		C5CA28169BAAEE0D68349877 /* Pods */ = {
@@ -434,12 +459,15 @@
 			files = (
 				8E1831BA2959AC390085AC16 /* MainViewModel.swift in Sources */,
 				8E4CFD7C2955E4290052D65C /* LocationData.swift in Sources */,
+				8ECCA4592A288B0100381823 /* SearchAPI.swift in Sources */,
 				8E6551B92A17B59B00574842 /* DetailListBackgroundViewModel.swift in Sources */,
+				8E20ADBE2A35838B0057B256 /* LocalNetwork.swift in Sources */,
 				8E6551B72A17B58900574842 /* DetailListBackgroudView.swift in Sources */,
 				8E4CFD7F2955E4630052D65C /* KLDocument.swift in Sources */,
 				8E1831BC295B09140085AC16 /* MTMapViewError.swift in Sources */,
 				8E6551B52A17AB9100574842 /* DetailListCell.swift in Sources */,
 				8E77B4C829533B8E00CEBBC8 /* AppDelegate.swift in Sources */,
+				8E20ADC02A3586D80057B256 /* MainModel.swift in Sources */,
 				8EC68AC8295886A6001F3C77 /* MainViewController.swift in Sources */,
 				8E4CFD812955E5170052D65C /* DetailListCellData.swift in Sources */,
 				8E77B4CA29533B8E00CEBBC8 /* SceneDelegate.swift in Sources */,
@@ -591,7 +619,6 @@
 				INFOPLIST_FILE = 19.FIndCVS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -625,7 +652,6 @@
 				INFOPLIST_FILE = 19.FIndCVS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
